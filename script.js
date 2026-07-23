@@ -277,3 +277,37 @@ buttonFormat.addEventListener("click", () => {
     console.log("success");
   }
 });
+
+const tipe3Select = document.getElementById("tipe3-select");
+const tipe3Input1 = document.getElementById("tipe3-input1");
+const tipe3Input2 = document.getElementById("tipe3-input2");
+const tipe3Button = document.getElementById("tipe3-button");
+const tipe3Answer = document.getElementById("tipe3-jawaban");
+
+tipe3Button.addEventListener("click", () => {
+  const firstInput = tipe3Input1.value;
+  const secondInput = tipe3Input2.value;
+  if (firstInput == "" || secondInput == "") {
+    tipe3Answer.innerHTML = "Jawaban : (format tidak boleh kosong!)";
+    console.log("failed");
+  } else if (isNaN(firstInput) || isNaN(secondInput)) {
+    console.log("come here");
+  } else {
+    if (tipe3Select.value == "none") {
+      tipe3Answer.innerHTML = "Jawaban : " + (Number(firstInput) + Number(secondInput));
+    } else if (tipe3Select.value == "+") {
+      tipe3Answer.innerHTML = "Jawaban : " + (Number(firstInput) + Number(secondInput));
+    } else if (tipe3Select.value == "x") {
+      tipe3Answer.innerHTML = "Jawaban : " + Number(firstInput) * Number(secondInput);
+    } else if (tipe3Select.value == "-") {
+      tipe3Answer.innerHTML = "Jawaban : " + (Number(firstInput) - Number(secondInput));
+    } else if (tipe3Select.value == ":") {
+      if (!isFinite(Number(firstInput) / Number(secondInput))) {
+        tipe3Answer.innerHTML = "Jawaban : tidak terhingga";
+      } else {
+        tipe3Answer.innerHTML = "Jawaban : " + Number(firstInput) / Number(secondInput);
+      }
+    } else {
+    }
+  }
+});

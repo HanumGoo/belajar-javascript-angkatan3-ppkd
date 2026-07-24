@@ -362,3 +362,8 @@ tipe3Button.addEventListener("click", () => {
 function answerFunction(answer) {
   tipe3Answer.innerHTML = "Jawaban : " + answer;
 }
+
+let tryRegex = "try thing those than talk t fall 12";
+let result = tryRegex.match(/t+/gi);
+
+console.log(result);

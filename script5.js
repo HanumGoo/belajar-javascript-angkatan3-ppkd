@@ -4,7 +4,6 @@ const outcity = document.getElementById("content-outcity");
 const button = document.getElementById("content-button");
 const resulter = document.getElementById("content-result");
 const allOutcity = document.querySelectorAll(".optional-outcity");
-
 const weightChange = document.getElementById("content-weightChange");
 
 button.addEventListener("click", () => {

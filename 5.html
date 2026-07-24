@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h1>Kilat Bersama</h1>
+            <div>
+                <h2>Berat Paket</h2>
+                <input id="content-weight" style="font-size: 20px;" type="number" value="10">
+                <select id="content-weightChange" style="font-size: 30px;">
+                    <option value="kg">Kg</option>
+                    <option value="gr">Gr</option>
+                </select>
+            </div>
+            <div>
+                <h2>Kota Tujuan</h2>
+                <select style="font-size: 20px;" name="" id="content-city">
+                    <option value="none" hidden>--Nama Kota--</option>
+                    <option value="bogor">Bogor</option>
+                    <option value="depok">Depok</option>
+                    <option value="other">Lainnya...</option>
+                </select>
+                <br>
+                <label class="optional-outcity form-label" hidden>Masukkan nama kota: </label>
+                <br>
+                <input class="optional-outcity" id="content-outcity" style="font-size: 20px;" type="text" hidden><span
+                    class="optional-outcity" hidden>(luar
+                    kota)</span>
+            </div>
+            <div>
+                <h2>Cek Tarif</h2>
+                <button type="button" id="content-button" style="font-size: 20px;">Check</button>
+                <h3 id="content-result">Total Biaya : </h3>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script5.js"></script>
+    <!-- <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
+
+</html>
